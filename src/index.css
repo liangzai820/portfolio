@@ -1,0 +1,117 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0a0e1a;
+  --color-surface: #121826;
+  --color-ink: #e6e8ee;
+  --color-ink-muted: #9aa3b2;
+  --color-accent: #4f8cff;
+  --color-accent-2: #22d3ee;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg);
+  background-image:
+    radial-gradient(ellipse at top, rgba(79, 140, 255, 0.08), transparent 60%),
+    radial-gradient(ellipse at bottom, rgba(34, 211, 238, 0.06), transparent 60%);
+  color: var(--color-ink);
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    "PingFang SC",
+    "Hiragino Sans GB",
+    "Microsoft YaHei",
+    sans-serif;
+}
+
+/* Markdown 正文渲染样式（博客 / 项目详情 / 后台预览共用） */
+.markdown-body {
+  line-height: 1.7;
+  font-size: 0.95rem;
+  word-break: break-word;
+}
+.markdown-body h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 1.2rem 0 0.6rem;
+}
+.markdown-body h2 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 1.1rem 0 0.5rem;
+}
+.markdown-body h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 1rem 0 0.4rem;
+}
+.markdown-body p {
+  margin: 0.6rem 0;
+}
+.markdown-body ul,
+.markdown-body ol {
+  margin: 0.6rem 0;
+  padding-left: 1.4rem;
+}
+.markdown-body ul {
+  list-style: disc;
+}
+.markdown-body ol {
+  list-style: decimal;
+}
+.markdown-body li {
+  margin: 0.25rem 0;
+}
+.markdown-body a {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+.markdown-body code {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.85em;
+}
+.markdown-body pre {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin: 0.8rem 0;
+}
+.markdown-body pre code {
+  background: transparent;
+  padding: 0;
+}
+.markdown-body blockquote {
+  border-left: 3px solid var(--color-accent);
+  padding-left: 1rem;
+  margin: 0.8rem 0;
+  color: var(--color-ink-muted);
+}
+.markdown-body hr {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 1rem 0;
+}
+.markdown-body table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 0.8rem 0;
+}
+.markdown-body th,
+.markdown-body td {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+}
+.markdown-body img {
+  max-width: 100%;
+  border-radius: 8px;
+}
